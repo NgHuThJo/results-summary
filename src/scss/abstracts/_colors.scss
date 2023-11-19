@@ -1,0 +1,58 @@
+// primary colors
+// naming convention based on position in color wheel
+// 30 - 210: warm - mid - cool
+// 210 - 30: cool - mid - warm
+$c-red-m-300: 0 100% 67%;
+$c-orange-400: 39 100% 56%;
+$c-cyan-c-600: 166 100% 37%;
+$c-blue-c-500: 234 85% 45%;
+
+// neutral colors
+$c-blue-m-300: 252 100% 67%;
+$c-blue-m-400: 241 81% 54%;
+$c-blue-w-500: 256 72% 46% / 1;
+$c-blue-m-500: 241 72% 46% / 0;
+
+// Color map for generating color utility classes
+$utility-color: (
+  "red": (
+    "m-300": $c-red-m-300,
+  ),
+  "orange": (
+    "400": $c-orange-400,
+  ),
+  "cyan": (
+    "c-600": $c-cyan-c-600,
+  ),
+  "blue": (
+    "c-500": $c-blue-c-500,
+    "m-300": $c-blue-m-300,
+    "m-400": $c-blue-m-400,
+    "m-500": $c-blue-m-500,
+    "w-500": $c-blue-w-500,
+  )
+);
+
+// Color map for generating custom color properties
+$contextual-color: (
+  "color": (
+  ),
+  "background-color": ( 
+  ),
+);
+
+// Theme map for generating theme classes
+$theme-color: (
+  "dark": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+  "light": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+);

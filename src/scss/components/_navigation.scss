@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.navigation {
+    position: $navigation-position;
+
+    @if($navigation-position == "sticky") {
+        top: 0;
+    }
+
+    color: $navigation-color;
+    background-color: $navigation-background-color;
+
+    ol,
+    ul {
+        list-style: $navigation-list-style;
+    }
+
+    a {
+        color: $navigation-link-color;
+
+        &:where(:hover, :focus-within) {
+            color: $navigation-link-color-hover;
+        }
+    }
+}
