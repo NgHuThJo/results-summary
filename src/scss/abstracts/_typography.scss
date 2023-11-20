@@ -28,12 +28,13 @@ $contextual-font: (
     ),
     "size": (
         "body": 1.125rem,
-        "h1": 3rem,
-        "h2": 2rem,
-        "h3": 1rem,
+        "h1": 2rem,
+        "h2": 1.25rem,
+        "score": 4rem,
     ),
     "weight": (
         "body": $font-weight-medium,
         "heading": $font-weight-bold,
+        "score": $font-weight-extra-bold,
     ),
 );

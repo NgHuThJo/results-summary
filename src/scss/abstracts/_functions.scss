@@ -5,6 +5,7 @@
     $color-abbreviations: (
         "color": "c",
         "background-color": "bgc",
+        "background-image": "bgi",
     );
 
     @if(map.get($color-abbreviations, $property-name) != null) {

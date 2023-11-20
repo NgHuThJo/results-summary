@@ -13,6 +13,11 @@ $c-blue-m-400: 241 81% 54%;
 $c-blue-w-500: 256 72% 46% / 1;
 $c-blue-m-500: 241 72% 46% / 0;
 
+$c-white-000: 0 0% 100%;
+$c-blue-cyan-000: 221 100% 96%;
+$c-blue-m-100: 241 100% 89%;
+$c-blue-cyan-700: 224 30% 27%;
+
 // Color map for generating color utility classes
 $utility-color: (
   "red": (
@@ -24,20 +29,36 @@ $utility-color: (
   "cyan": (
     "c-600": $c-cyan-c-600,
   ),
+  "blue-cyan": (
+    "000": $c-blue-cyan-000,
+    "700": $c-blue-cyan-700,
+  ),
   "blue": (
     "c-500": $c-blue-c-500,
     "m-300": $c-blue-m-300,
+    "m-100": $c-blue-m-100,
     "m-400": $c-blue-m-400,
     "m-500": $c-blue-m-500,
     "w-500": $c-blue-w-500,
-  )
+  ),
+  "white": (
+    "000": $c-white-000,
+  ),
 );
 
 // Color map for generating custom color properties
 $contextual-color: (
   "color": (
+    "body": $c-blue-m-100,
+    "score": $c-white-000,
   ),
   "background-color": ( 
+    "body": $c-blue-cyan-000,
+    "card": $c-white-000,
+  ),
+  "background-image": (
+    "score-from": $c-blue-m-300,
+    "score-to": $c-blue-m-400,
   ),
 );
 

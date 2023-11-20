@@ -3,3 +3,43 @@
 @use "./components/" as *;
 @use "./layout/" as *;
 @use "./utilities/" as *;
+
+.card__left {
+    --gap: 1rem;
+
+    @include grid(center, null, var(--gap));
+
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to)));
+
+    p:nth-of-type(1) {
+        font: {
+            weight: var(--fw-heading);
+            size: 1.125rem;
+        }
+        line-height: 1.1;
+        color: hsl(var(--c-score));
+    }
+}
+
+.score {
+    @include grid;
+
+    place-content: center;
+    width: 10rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to))); 
+
+    span:first-child {
+        display: block;
+        font: {
+            weight: var(--fw-score);
+            size: var(--fs-score);
+        }
+        line-height: 1.1;
+        color: hsl(var(--c-score));
+    }
+}
