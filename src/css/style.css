@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.card__left, .score, .card__right, .results, .grid, .grid-stack, .even-cols, .auto-grid {
+body, .card__left, .score, .card__right, .results, .grid, .grid-stack, .even-cols, .auto-grid {
   display: grid;
 }
 
@@ -50,7 +50,7 @@ h4 {
   --c-verbal: 166 100% 37%;
   --c-visual: 234 85% 45%;
   --bgc-body: 221 100% 96%;
-  --bgc-card: 0 0% 100%;
+  --bgc-summary: 0 0% 100%;
   --bgc-button: 224 30% 27%;
   --bgi-score-from: 252 100% 67%;
   --bgi-score-to: 241 81% 54%;
@@ -2142,6 +2142,24 @@ h6 {
   isolation: isolate;
 }
 
+@media (min-width: 768px) {
+  body {
+    place-content: center;
+  }
+}
+
+main {
+  --grid-gap: 0;
+  max-width: 60rem;
+  background-color: hsl(var(--bgc-summary));
+}
+@media (min-width: 768px) {
+  main {
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+}
+
 .card__left {
   --gap: 1rem;
   justify-items: center;
@@ -2157,13 +2175,18 @@ h6 {
   line-height: 1.1;
   color: hsl(var(--c-score));
 }
+@media (min-width: 768px) {
+  .card__left {
+    border-radius: 2rem;
+  }
+}
 
 .score {
   place-content: center;
   width: 10rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-image: linear-gradient(to top, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to)));
+  background-image: linear-gradient(to bottom, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to)));
 }
 .score span:first-child {
   display: block;
@@ -2216,13 +2239,13 @@ h6 {
   color: hsl(var(--_c-skill));
 }
 
-.points {
+.points__container {
   font-weight: var(--fw-heading);
-  color: hsl(var(--c-score-summary));
+  color: hsl(var(--c-score-max));
 }
 
-.points__container {
-  color: hsl(var(--c-score-max));
+.points {
+  color: hsl(var(--c-score-summary));
 }
 
 .button {

@@ -4,6 +4,26 @@
 @use "./layout/" as *;
 @use "./utilities/" as *;
 
+body {
+    @include grid;
+
+    @include min-query("s") {
+        place-content: center;
+    }
+}
+
+main {
+    --grid-gap: 0;
+
+    max-width: 60rem;
+    background-color: hsl(var(--bgc-summary));
+
+    @include min-query("s") {
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+}
+
 .card__left {
     --gap: 1rem;
 
@@ -22,6 +42,10 @@
         line-height: 1.1;
             color: hsl(var(--c-score));
     }
+
+    @include min-query("s") {
+        border-radius: 2rem;
+    }
 }
 
 .score {
@@ -31,7 +55,7 @@
     width: 10rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-image: linear-gradient(to top, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to))); 
+    background-image: linear-gradient(to bottom, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to))); 
 
     span:first-child {
         display: block;
@@ -96,15 +120,15 @@
     color: hsl(var(--_c-skill));
 }
 
-.points {
+.points__container {
     font: {
         weight: var(--fw-heading);
     }
-    color: hsl(var(--c-score-summary));
+    color: hsl(var(--c-score-max));
 }
 
-.points__container {
-    color: hsl(var(--c-score-max));
+.points {
+    color: hsl(var(--c-score-summary));
 }
 
 .button {
