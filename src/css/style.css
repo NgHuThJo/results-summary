@@ -43,6 +43,8 @@ h4 {
   --c-body: 241 100% 89%;
   --c-button: 0 0% 100%;
   --c-score: 0 0% 100%;
+  --c-score-summary: 224 30% 27%;
+  --c-score-max: 256 72% 46%/1;
   --c-reaction: 0 100% 67%;
   --c-memory: 39 100% 56%;
   --c-verbal: 166 100% 37%;
@@ -465,20 +467,20 @@ h6 {
   background-color: hsl(234, 85%, 45%);
 }
 
-.c-blue-m-300 {
-  color: hsl(252, 100%, 67%);
-}
-
-.bgc-blue-m-300 {
-  background-color: hsl(252, 100%, 67%);
-}
-
 .c-blue-m-100 {
   color: hsl(241, 100%, 89%);
 }
 
 .bgc-blue-m-100 {
   background-color: hsl(241, 100%, 89%);
+}
+
+.c-blue-m-300 {
+  color: hsl(252, 100%, 67%);
+}
+
+.bgc-blue-m-300 {
+  background-color: hsl(252, 100%, 67%);
 }
 
 .c-blue-m-400 {
@@ -2173,7 +2175,7 @@ h6 {
 
 .card__right {
   --spacing: 2rem;
-  gap: var(--sapcing);
+  gap: var(--spacing);
   padding: var(--spacing);
 }
 
@@ -2182,7 +2184,7 @@ h6 {
 }
 
 .results__item {
-  --alpha-skill: 0.5;
+  --alpha-skill: 0.1;
   --_c-skill: var(--c-skill, inherit);
   --_bgc-result-item: var(--bgc-result-item, inherit);
   justify-content: space-between;
@@ -2210,15 +2212,23 @@ h6 {
 
 .skill {
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   color: hsl(var(--_c-skill));
 }
 
 .points {
-  color: hsl(var(--_c-points));
+  font-weight: var(--fw-heading);
+  color: hsl(var(--c-score-summary));
+}
+
+.points__container {
+  color: hsl(var(--c-score-max));
 }
 
 .button {
   padding: 1rem;
   border-radius: 2rem;
+}
+.button:hover {
+  background-image: linear-gradient(to bottom, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to)));
 }/*# sourceMappingURL=style.css.map */

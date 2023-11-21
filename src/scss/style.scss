@@ -20,7 +20,7 @@
             size: 1.125rem;
         }
         line-height: 1.1;
-        color: hsl(var(--c-score));
+            color: hsl(var(--c-score));
     }
 }
 
@@ -47,9 +47,8 @@
 .card__right {
     --spacing: 2rem;
 
-    @include grid;
+    @include grid(null, null, var(--spacing));
 
-    gap: var(--sapcing);
     padding: var(--spacing);
 }
 
@@ -60,7 +59,7 @@
 }
 
 .results__item {
-    --alpha-skill: 0.5;
+    --alpha-skill: 0.1;
     --_c-skill: var(--c-skill, inherit);
     --_bgc-result-item: var(--bgc-result-item, inherit);
     
@@ -92,16 +91,27 @@
 }
 
 .skill {
-    @include flex(null, null, center, 2rem);    
+    @include flex(null, null, center, 1rem);    
 
     color: hsl(var(--_c-skill));
 }
 
 .points {
-    color: hsl(var(--_c-points));
+    font: {
+        weight: var(--fw-heading);
+    }
+    color: hsl(var(--c-score-summary));
+}
+
+.points__container {
+    color: hsl(var(--c-score-max));
 }
 
 .button {
     padding: 1rem;
     border-radius: 2rem;
+
+    &:hover {
+        background-image: linear-gradient(to bottom, hsl(var(--bgi-score-from)), hsl(var(--bgi-score-to)));
+    }
 }

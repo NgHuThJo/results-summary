@@ -35,8 +35,8 @@ $utility-color: (
   ),
   "blue": (
     "c-500": $c-blue-c-500,
-    "m-300": $c-blue-m-300,
     "m-100": $c-blue-m-100,
+    "m-300": $c-blue-m-300,
     "m-400": $c-blue-m-400,
     "m-500": $c-blue-m-500,
     "w-500": $c-blue-w-500,
@@ -52,6 +52,8 @@ $contextual-color: (
     "body": $c-blue-m-100,
     "button": $c-white-000,
     "score": $c-white-000,
+    "score-summary": $c-blue-cyan-700,
+    "score-max": $c-blue-w-500,
     "reaction": $c-red-m-300,
     "memory": $c-orange-400,
     "verbal": $c-cyan-c-600,
