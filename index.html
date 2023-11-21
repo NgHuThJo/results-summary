@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/main.js" type="module" defer></script>
   
   <title>Frontend Mentor | Results summary component</title>
 </head>
@@ -26,20 +27,20 @@
     <p>You scored higher than 65% of the people who have taken these tests.</p>
     </section>
     <section class="card__right">
-      <h2>Summary</h2>
+      <h2 class="c-blue-cyan-700">Summary</h2>
       <div class="results">
-        <article class="results__item">
-
-        </article>
-        <article class="results__item">
-
-        </article>
-        <article class="results__item">
-
-        </article>
-        <article class="results__item">
-
-        </article>
+        <template class="template">
+          <article class="results__item">
+            <div class="skill">
+              <img src="" alt="skill icon">
+              <p></p>
+            </div>
+            <p class="points__container">
+              <span class="points"></span>
+              / 100
+            </p>
+          </article>
+        </template>
       </div>
       <button class="button">Continue</button>
     </section>

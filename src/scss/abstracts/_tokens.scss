@@ -91,12 +91,12 @@ $button-border-radius: null;
 
 $button-font-weight: null;
 $button-font-size: null;
-$button-color: null;
+$button-color: hsl(var(--c-button));
 $button-color-hover: null;
 $button-link-color: null;
 $button-link-color-hover: null;
 
-$button-background-color: null;
+$button-background-color: hsl(var(--bgc-button));
 $button-background-color-hover: null;
 
 // Forms

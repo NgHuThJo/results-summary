@@ -50,11 +50,17 @@ $utility-color: (
 $contextual-color: (
   "color": (
     "body": $c-blue-m-100,
+    "button": $c-white-000,
     "score": $c-white-000,
+    "reaction": $c-red-m-300,
+    "memory": $c-orange-400,
+    "verbal": $c-cyan-c-600,
+    "visual": $c-blue-c-500,
   ),
   "background-color": ( 
     "body": $c-blue-cyan-000,
     "card": $c-white-000,
+    "button": $c-blue-cyan-700,
   ),
   "background-image": (
     "score-from": $c-blue-m-300,

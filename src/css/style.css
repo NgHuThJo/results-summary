@@ -1,8 +1,8 @@
-.flex, .flex-col, .flex-group, .flex-grid {
+.results__item, .skill, .flex, .flex-col, .flex-group, .flex-grid {
   display: flex;
 }
 
-.card__left, .score, .grid, .grid-stack, .even-cols, .auto-grid {
+.card__left, .score, .card__right, .results, .grid, .grid-stack, .even-cols, .auto-grid {
   display: grid;
 }
 
@@ -41,9 +41,15 @@ h4 {
 
 :root {
   --c-body: 241 100% 89%;
+  --c-button: 0 0% 100%;
   --c-score: 0 0% 100%;
+  --c-reaction: 0 100% 67%;
+  --c-memory: 39 100% 56%;
+  --c-verbal: 166 100% 37%;
+  --c-visual: 234 85% 45%;
   --bgc-body: 221 100% 96%;
   --bgc-card: 0 0% 100%;
+  --bgc-button: 224 30% 27%;
   --bgi-score-from: 252 100% 67%;
   --bgi-score-to: 241 81% 54%;
   --ff-body: "Hanken Grotesk", sans-serif;
@@ -109,6 +115,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+.button {
+  color: hsl(var(--c-button));
+  background-color: hsl(var(--bgc-button));
+}
 .navigation {
   color: hsl(var(--c-navigation));
 }
@@ -2159,4 +2169,56 @@ h6 {
   font-size: var(--fs-score);
   line-height: 1.1;
   color: hsl(var(--c-score));
+}
+
+.card__right {
+  --spacing: 2rem;
+  gap: var(--sapcing);
+  padding: var(--spacing);
+}
+
+.results {
+  gap: 1rem;
+}
+
+.results__item {
+  --alpha-skill: 0.5;
+  --_c-skill: var(--c-skill, inherit);
+  --_bgc-result-item: var(--bgc-result-item, inherit);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--_bgc-result-item));
+}
+.results__item--reaction {
+  --c-skill: var(--c-reaction);
+  --bgc-result-item: var(--c-reaction) / var(--alpha-skill);
+}
+.results__item--memory {
+  --c-skill: var(--c-memory);
+  --bgc-result-item: var(--c-memory) / var(--alpha-skill);
+}
+.results__item--verbal {
+  --c-skill: var(--c-verbal);
+  --bgc-result-item: var(--c-verbal) / var(--alpha-skill);
+}
+.results__item--visual {
+  --c-skill: var(--c-visual);
+  --bgc-result-item: var(--c-visual) / var(--alpha-skill);
+}
+
+.skill {
+  align-items: center;
+  gap: 2rem;
+  color: hsl(var(--_c-skill));
+}
+
+.points {
+  color: hsl(var(--_c-points));
+}
+
+.button {
+  padding: 1rem;
+  border-radius: 2rem;
 }/*# sourceMappingURL=style.css.map */

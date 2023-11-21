@@ -43,3 +43,65 @@
         color: hsl(var(--c-score));
     }
 }
+
+.card__right {
+    --spacing: 2rem;
+
+    @include grid;
+
+    gap: var(--sapcing);
+    padding: var(--spacing);
+}
+
+.results {
+    @include grid;
+
+    gap: 1rem;
+}
+
+.results__item {
+    --alpha-skill: 0.5;
+    --_c-skill: var(--c-skill, inherit);
+    --_bgc-result-item: var(--bgc-result-item, inherit);
+    
+    @include flex(null, space-between, center);
+
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: hsl(var(--_bgc-result-item));
+
+    &--reaction {
+        --c-skill: var(--c-reaction);
+        --bgc-result-item: var(--c-reaction) / var(--alpha-skill);
+    }
+    
+    &--memory {
+        --c-skill: var(--c-memory);
+        --bgc-result-item: var(--c-memory) / var(--alpha-skill);
+    } 
+
+    &--verbal {
+        --c-skill: var(--c-verbal);
+        --bgc-result-item: var(--c-verbal) / var(--alpha-skill);
+    }
+
+    &--visual {
+        --c-skill: var(--c-visual);
+        --bgc-result-item: var(--c-visual) / var(--alpha-skill);         
+    }
+}
+
+.skill {
+    @include flex(null, null, center, 2rem);    
+
+    color: hsl(var(--_c-skill));
+}
+
+.points {
+    color: hsl(var(--_c-points));
+}
+
+.button {
+    padding: 1rem;
+    border-radius: 2rem;
+}
